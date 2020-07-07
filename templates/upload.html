@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <title>车牌号码识别</title>
+</head>
+<body>
+{% block content %}
+<div class="body" style="margin-top: -20px">
+    <table class="left" style="position: relative;left: 30px;top: 100px;">
+        <form action="http://localhost:5000/uploader" method="POST"
+              enctype="multipart/form-data">
+            <tr>
+                <td><input type="file" name="file"/></td>
+            </tr>
+            <tr>
+                <td>车辆进入请点击<input type="image" src="static/img/6.jpg" alt="Submit" width="40" height="40"/></td>
+            </tr>
+            <tr>
+                <td><select class="form-control" name="came" id="came">
+                    <option selected="selected">是否使用摄像头拍照</option>
+                    <option>是</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>车辆进入请点击<input type="image" src="static/img/6.jpg" alt="Submit" width="40" height="40"/></td>
+            </tr>
+        </form>
+    </table>
+</div>
+<div class="body" style="background-image:url(/static/img/7.jpg);
+                                    background-repeat: no-repeat;
+                                    background-position:10px center">
+    <p style="color: red;
+            font-size: 200%;
+            position: relative;
+            left: -20px;
+            top: 100px;">温馨提示</p>
+    <p style="color: red;
+            font-size:100%;
+            left: -20px;
+            position: relative;
+            top: 100px;">本停车场收费标准为：</br>
+        每分钟五分钱，</br>
+        停车超过一小时，</br>
+        每分钟一毛。</p>
+</div>
+{% endblock content %}
+</body>
+</html>

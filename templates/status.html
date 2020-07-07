@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>停车场进出状况</title>
+</head>
+<body>
+{% block content %}
+<div class="body" style="width:100%;margin-bottom: 10px;background-image:url(/static/img/41.jpg);
+                                    background-repeat: no-repeat;
+                                    background-position:10px center;
+                                    background-size: 100%;
+                                    ">
+    <table class="right" width="600" style=" text-align: left;">
+        {% if tem%}
+        <tr>
+            <th>车牌号码</th>
+            <th>进库时间</th>
+            <th>出库时间</th>
+            <th>所需费用</th>
+        </tr>
+        {%for t in tem %}
+        <tr>
+            <td>{{t.license_plate}}</td>
+            <td>{{t.enter_time}}</td>
+            <td>{{t.out_time}}</td>
+            <td>{{t.cost}}&yen</td>
+        </tr>
+        {% endfor %}
+        {%else%}
+        <tr>
+            <td>没有车辆进入</td>
+        </tr>
+        {% endif %}
+    </table>
+</div>
+{% endblock content %}
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/css/mystyle.css"/>
+    <style>
+        a:link, a:visited {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            color: #0e0e0e;
+            float: left;
+            width: 100%;
+            text-align: center;
+            padding: 2px;
+            text-decoration: none;
+        }
+
+        a:hover, a:active {
+            background-color: #7A991A;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>智能停车场</h1>
+</div>
+<div class="nav" style="width: 34%; margin-left: -20px; margin-right: -55px; margin-top: 10px;margin-bottom: 11px">
+    <a href="/">首页</a>
+</div>
+<div class="nav" style="width: 34%;margin-left: 55px;margin-top: 10px;margin-bottom: 11px">
+    <a href="/status">停车场进出情况</a>
+</div>
+<div class="nav" style="width: 34%;margin-right: -150px;margin-top: 10px;margin-bottom: 11px">
+    <a href="/introduction">网站介绍</a>
+</div>
+{% block content %}
+{% endblock %}
+<div class="footer" style="height: 50px;">
+    <p>Copyright 2020 by Sun.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网站简介</title>
+</head>
+<body>
+{% block content %}
+<div class="body" style="width:100%;margin-bottom: 11px;background-image:url(/static/img/31.jpg);
+                                    background-repeat: no-repeat;
+                                    background-position:10px center;
+                                    background-size: 110%;
+                                    ">
+    <p style="color: red;
+            font-size: 200%;
+            position: relative;
+            left: -20px;
+            top: 100px;">网站介绍</p>
+    <p style="color: #ff0000;
+            font-size:100%;
+            left: -20px;
+            position: relative;
+            top: 100px;">智能停车场系统，是现代化停车场车辆收费及设备自动化管理的关键所在。</br>
+        该系统可以根据采集到的车辆出入记录等信息实现对车辆的综合管理，</br>
+        其主要功能是车牌的识别，已达到对原始数据的采集保存。</br>
+        其次还有收入统计，满预警提示，超长车提示等功能。</br>
+    </p>
+</div>
+{% endblock content %}
+</body>
+</html>

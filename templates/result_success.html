@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8">
+    <title>停车场</title>
+</head>
+<body>
+{% block content %}
+<div class="body">
+    <h2 style="margin-left: -5cm;">车辆图片</h2>
+    <table class="left">
+        <tr>
+            <td>
+                <img src="{{url}}" width="300" height="350"/></br>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="body">
+    <h2 style="margin-left: -5cm;">车辆信息</h2>
+    <table class="right" width="300" height="350" style=" text-align: left;">
+        {% if car%}
+        <tr>
+            <td>车牌码号为：{{car.license_plate}}</td>
+        </tr>
+        <tr>
+            <td>车牌类型为：{{car.type}}</td>
+        </tr>
+        <tr>
+            <td>入库时间为：{{car.enter_time}}</td>
+        </tr>
+        <tr>
+            <td>出库时间为：{{car.out_time}}</td>
+        </tr>
+        <tr>
+            <td>所需费用为：{{car.cost}}&yen</td>
+        </tr>
+        {% endif %}
+    </table>
+    <button onclick="window.location.href='/'" style="width: 100px;
+	                                                  line-height: 30px;
+	                                                  border-radius: 10px;
+	                                                  border: none;
+	                                                  background: #FFFFFF;
+	                                                  color: #555555;
+	                                                  margin-bottom:30px;">
+        车辆继续进入
+    </button>
+</div>
+{% endblock content %}
+</body>
+</html>
